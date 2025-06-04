@@ -1,4 +1,4 @@
-# IAm-hands-on
+# IAM-Security-Hands-On
 
 # 🛡️ AWS IAM Security Hands-On Practice
 
