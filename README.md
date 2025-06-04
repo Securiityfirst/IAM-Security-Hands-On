@@ -6,6 +6,12 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 
 ## 📚 Training Topics Covered
 
+## ✅ Prerequisites
+
+- AWS Free Tier Account
+- Basic knowledge of IAM and AWS Console
+- AWS CLI installed and configured (optional but recommended)
+  
 ### 1. AWS Account Setup
 - ✅ Create a new AWS Account
 - 🔐 Save and delete root token securely
@@ -93,13 +99,6 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 - STS in Action (Temporary Credentials)
 - Policy Simulation Results
 - SCP Enforcement Examples
-
-
-## ✅ Prerequisites
-
-- AWS Free Tier Account
-- Basic knowledge of IAM and AWS Console
-- AWS CLI installed and configured (optional but recommended)
 
 
 ## ⚠️ Disclaimer
