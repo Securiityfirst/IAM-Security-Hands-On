@@ -12,6 +12,8 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 - Basic knowledge of IAM and AWS Console
 - AWS CLI installed and configured (optional but recommended)
   
+ 📚 Training Topics Covered  
+
 ### 1. AWS Account Setup
 - ✅ Create a new AWS Account
 - 🔐 Save and delete root token securely
