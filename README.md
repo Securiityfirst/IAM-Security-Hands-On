@@ -4,15 +4,13 @@
 
 Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This training is designed for individuals seeking practical, scenario-based learning around AWS Identity and Access Management (IAM), with a strong focus on real-world security best practices.
 
-## 📚 Training Topics Covered
-
 ## ✅ Prerequisites
 
 - AWS Free Tier Account
 - Basic knowledge of IAM and AWS Console
 - AWS CLI installed and configured (optional but recommended)
   
- 📚 Training Topics Covered  
+## 📚 Training Topics Covered  
 
 ### 1. AWS Account Setup
 - ✅ Create a new AWS Account
