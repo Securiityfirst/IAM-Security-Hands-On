@@ -12,46 +12,46 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
   
 ## 📚 Training Topics Covered  
 
-### 1. AWS Account Setup
+### 1. AWS Account Setup(AAS)
 - ✅ Create a new AWS Account
 - 🔐 Save and delete root token securely
 
-### 2. Cost and Billing
+### 2. Cost and Billing(C&B)
 - 💰 Setup and display billing alarms
 
-### 3. AWS Authentication Methods
+### 3. AWS Authentication Methods(AAM)
 - 📊 **[Diagram]** of AWS Authentication Methods (AAM)
 
-### 4. IAM Core Components
+### 4. IAM Core Components(IAMCC)
 - 👤 Create IAM Users
 - 📄 Create and attach IAM Policies
 - 🧑‍💼 Create IAM Roles
 - 👥 Create IAM User Groups
 
-### 5. IAM Permissions Management
+### 5. IAM Permissions Management(IAMPM)
 - 🛡️ Grant custom policies
 - 🛡️ Grant IAM roles
 - 🛡️ Grant AWS Managed Policies (AMP)
 
-### 6. Security Token Services
+### 6. Security Token Services(STS)
 - 🖼️ **[Screenshots]** Displaying AWS STS capabilities (AssumeRole, GetSessionToken, etc.)
 
-### 7. MFA Setup
-- 🔐 Configure and display Multi-Factor Authentication (MFA)
+### 7. MFA Setup(MFA)
+- 🔐 Configure and display Multi-Factor Authentication 
 
-### 8. IAM Policies Overview
+### 8. IAM Policies Overview(IAMPO)
 - 🔍 Identity-Based vs Resource-Based Policies (IBP vs RBP)
 - 🧩 Access Control: Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC)
 - 🧱 Apply Permission Boundaries (PB)
 - 🧠 IAM Policy Evaluation Logic (IPE)
 - 🧬 IAM Policy Structure (IPS)
 
-### 9. Policy Tools
+### 9. Policy Tools(PT)
 - ⚙️ AWS Policy Generator (APG)
 - 🧪 IAM Policy Simulator (IPSI)
 
 
-## 🏢 AWS Organizations & SCP
+## 🏢 AWS Organizations & SCP(AO&SCP)
 
 ### 10. Organizations & Management
 - 🏗️ Create AWS Organization
@@ -62,17 +62,17 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 - 🔒 Prevent S3 Bucket Deletion
   
 
-## 🔁 IAM Advanced Use Cases
+## 🔁 IAM Advanced Use Cases(IAMUC)
 
 ### 12. IAM Roles: Use Cases
 - 📄 IAM Role use cases
 - 🔄 Cross-account access to S3 with `aws:AssumeRole`
 
-### 13. EC2 Instance Profiles
+### 13. EC2 Instance Profiles(EIP)
 - 🧳 Use Amazon EC2 Instance Profiles for service access
 
 
-## 🗃️ AWS Directory and Identity Services
+## 🗃️ AWS Directory and Identity Services (AD&IS)
 
 ### 14. Directory Services
 - 📂 AWS Managed Microsoft Active Directory
