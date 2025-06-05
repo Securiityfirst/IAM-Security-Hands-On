@@ -65,7 +65,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 ## 🔁 IAM Advanced Use Cases
 
 ### 12. IAM Roles: Use Cases
-- 📄 **[Document]** IAM Role use cases
+- 📄 IAM Role use cases
 - 🔄 Cross-account access to S3 with `aws:AssumeRole`
 
 ### 13. EC2 Instance Profiles
