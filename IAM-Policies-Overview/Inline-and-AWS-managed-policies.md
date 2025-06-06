@@ -24,10 +24,4 @@ Assigning AmazonS3ReadOnlyAccess to all analysts who only need to read data from
 	•	AmazonEC2FullAccess
 	•	CloudWatchFullAccess
 
-✅ When to Use What?
-
-Scenario                                         Recommended Policy Type
-
-Unique, specific access for one identit.         Inline Policy
-Standardized access for multiple users/roles.     AWS Managed Policy
-Need full control and versioning of permissions.  Customer Managed Policy (not discussed above, but another type worth noting)
+![image](https://github.com/user-attachments/assets/d6968ecf-7d9a-4740-9101-e8630c6ebab6)
