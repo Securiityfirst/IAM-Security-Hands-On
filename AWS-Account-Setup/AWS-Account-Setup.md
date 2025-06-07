@@ -1,7 +1,7 @@
 ✅ Create a new AWS Account
 
-****Add screenshots****
+*Add screenshots*
 
 🔐 Save and delete root token securely
 
-****Add screenshots****
+*Add screenshots*
