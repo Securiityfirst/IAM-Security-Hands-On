@@ -25,3 +25,28 @@ Assigning AmazonS3ReadOnlyAccess to all analysts who only need to read data from
 	•	CloudWatchFullAccess
 
 ![image](https://github.com/user-attachments/assets/d6968ecf-7d9a-4740-9101-e8630c6ebab6)
+
+- 🔍 Custome managed policies
+
+###Add screenshots
+
+- 🔍 Identity-Based vs Resource-Based Policies (IBP vs RBP)
+
+###Add screenshots
+  
+- 🧩 Access Control: Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC)
+
+###Add screenshots
+  
+- 🧱 Apply Permission Boundaries (PB)
+
+###Add screenshots
+  
+- 🧠 IAM Policy Evaluation Logic (IPE)
+
+###Add screenshots
+
+- 🧬 IAM Policy Structure (IPS)
+
+###Add screenshots
+
