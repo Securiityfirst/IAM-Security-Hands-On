@@ -1,4 +1,37 @@
-- 🖼️ [Screenshots] Displaying AWS STS capabilities (AssumeRole, GetSessionToken, etc.)
+- AWS STS capabilities (AssumeRole, GetSessionToken, etc.)
+
+AWS STS (AWS Security Token Service) is a web service that enables you to request temporary, limited-privilege credentials for AWS Identity and Access Management (IAM) users or for users that you authenticate (federated users).
+
+⸻
+
+🔑 Core Use Cases
+	1.	Temporary access for IAM users or roles
+→ Use AssumeRole to switch to a different role with specific permissions.
+	2.	Federated user access (SAML, web identity)
+→ Use AssumeRoleWithSAML or AssumeRoleWithWebIdentity for temporary credentials.
+	3.	Programmatic access with temporary credentials
+→ Use GetSessionToken to generate temporary credentials for MFA-enabled IAM users.
+	4.	Cross-account access
+→ Use AssumeRole to allow secure access to resources in another AWS account.
+
+![image](https://github.com/user-attachments/assets/5b75928c-28bd-451d-be35-909f70f10467)
+
+🛡️ Security Considerations
+	•	Temporary credentials are short-lived (15 mins to 12 hours).
+	•	Use MFA for GetSessionToken to enforce strong authentication.
+	•	Control access with trust policies on roles.
+	•	Use condition keys like aws:RequestedRegion, aws:SourceIp, aws:MultiFactorAuthPresent.
+
+📌 Example: AssumeRole CLI
+
+aws sts assume-role \
+  --role-arn arn:aws:iam::123456789012:role/demo-role \
+  --role-session-name demoSession
+
+  aws sts assume-role \
+  --role-arn arn:aws:iam::123456789012:role/demo-role \
+  --role-session-name demoSession
+
 
 AssumeRole
 
