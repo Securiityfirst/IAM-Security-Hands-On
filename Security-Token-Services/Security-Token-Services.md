@@ -205,7 +205,9 @@ phases:
   build:
     commands:
       - echo "Get MFA session token"
-      - export MFA_CODE=123456  # ⚠️ Replace with real-time input for actual use
+      - export MFA_CODE=123456  
+      
+      # ⚠️ Replace with real-time input for actual use
       - export MFA_ARN=arn:aws:iam::123456789012:mfa/your-user
       - TOKEN_JSON=$(aws sts get-session-token \
           --serial-number $MFA_ARN \
@@ -347,7 +349,7 @@ session = boto3.Session(
 s3 = session.client('s3')
 response = s3.list_buckets()
 for bucket in response['Buckets']:
-    print(f'  🪣 {bucket["Name"]}')
+    print(f' {bucket["Name"]}')
 
 Or dynamically from aws sts get-session-token output (e.g., from subprocess).
 
