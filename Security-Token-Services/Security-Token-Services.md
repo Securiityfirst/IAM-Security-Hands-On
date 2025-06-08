@@ -44,10 +44,10 @@ The AWS Security Token Service (STS) AssumeRole API operation is a powerful mech
 ![image](https://github.com/user-attachments/assets/2ac24f52-3570-431c-8c53-2cf0a00e3705)
 
 🔄 Basic Workflow (How AssumeRole Works)
-	1.	Caller must have permission to call sts:AssumeRole on the target role.
-	2.	Role’s Trust Policy must allow the principal (caller) to assume the role.
-	3.	STS issues temporary credentials.
-	4.	These credentials can be used to access AWS resources as per the role’s permissions.
+-	1.	Caller must have permission to call sts:AssumeRole on the target role.
+-	2.	Role’s Trust Policy must allow the principal (caller) to assume the role.
+-	3.	STS issues temporary credentials.
+-	4.	These credentials can be used to access AWS resources as per the role’s permissions.
 
 🧾 Example CLI Command
 
