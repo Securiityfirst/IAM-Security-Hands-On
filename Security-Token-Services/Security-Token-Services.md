@@ -77,7 +77,7 @@ GetSessionToken
 
 To retrieve a session token using aws sts get-session-token in a YAML-based automation (e.g., using a GitHub Actions workflow or AWS CodeBuild buildspec), you’ll need to integrate the AWS CLI into your YAML script.
 
-Here are two examples:
+Examples:
 
 ⸻
 
@@ -194,7 +194,7 @@ jobs:
 
 MFA isn’t normally used in CodeBuild roles, but you can script this in a secure CI/CD if necessary using pre-built session tokens.
 
-Here’s how to simulate it locally in a buildspec.yml:
+Simulate it locally in a buildspec.yml:
 
 version: 0.2
 
