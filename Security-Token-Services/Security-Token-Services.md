@@ -614,13 +614,13 @@ source venv/bin/activate
 pip install .
 
 7. 🌍 Want to Publish to PyPI?
-	•	Create an account on https://pypi.org
+ Create an account on https://pypi.org
 
-•	Install the tools:
+• Install the tools:
 
 pip install twine build
 
-	•	Build & upload:
+• Build & upload:
 
  python -m build
 twine upload dist/*
