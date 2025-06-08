@@ -5,13 +5,13 @@ AWS STS (AWS Security Token Service) is a web service that enables you to reques
 ⸻
 
 🔑 Core Use Cases
-	1.	Temporary access for IAM users or roles
+-	1.	Temporary access for IAM users or roles
 → Use AssumeRole to switch to a different role with specific permissions.
-	2.	Federated user access (SAML, web identity)
+-	2.	Federated user access (SAML, web identity)
 → Use AssumeRoleWithSAML or AssumeRoleWithWebIdentity for temporary credentials.
-	3.	Programmatic access with temporary credentials
+-	3.	Programmatic access with temporary credentials
 → Use GetSessionToken to generate temporary credentials for MFA-enabled IAM users.
-	4.	Cross-account access
+-	4.	Cross-account access
 → Use AssumeRole to allow secure access to resources in another AWS account.
 
 ![image](https://github.com/user-attachments/assets/5b75928c-28bd-451d-be35-909f70f10467)
