@@ -625,6 +625,89 @@ pip install twine build
  python -m build
 twine upload dist/*
 
+Federated Access
+
+Federated Access with AWS STS, which is commonly used to grant temporary access to AWS for users from external identity providers (IdPs) such as Microsoft Entra ID (formerly Azure AD), Google, Facebook, or a custom SAML provider.
+
+🌐 AWS STS Federated Access Overview
+
+Federated access enables users outside of AWS to assume a role in your AWS account using one of the following:
+
+✅ STS APIs for Federation:
+
+![image](https://github.com/user-attachments/assets/c561c4ef-5593-4197-b138-f7534ce05863)
+
+🔐 SAML Federation Example (Enterprise SSO with Azure AD)
+
+🔁 Flow Summary:
+
+User → Login to Azure AD → Gets SAML Assertion
+ → AWS STS AssumeRoleWithSAML → Temporary AWS Credentials
+ → Access AWS resources (S3, EC2, etc.)
+
+✅ Steps to Implement:
+-	1.	Create IAM Role for SAML
+In AWS IAM:
+	•	Trust policy must include SAML provider.
+	•	Permissions policy defines allowed AWS actions.
+	•	Example trust relationship:
+
+ {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Federated": "arn:aws:iam::123456789012:saml-provider/AzureAD"
+      },
+      "Action": "sts:AssumeRoleWithSAML",
+      "Condition": {
+        "StringEquals": {
+          "SAML:aud": "https://signin.aws.amazon.com/saml"
+        }
+      }
+    }
+  ]
+}
+
+-    2.	Configure IdP (e.g., Azure AD / Okta)
+	•	Register AWS as an enterprise application.
+	•	Upload AWS metadata to IdP and vice versa.
+	•	Map IdP groups → AWS roles via SAML assertions.
+	3.	User Logs into IdP → Gets SAML Assertion
+	4.	Browser posts SAML to AWS SSO endpoint
+AWS automatically calls AssumeRoleWithSAML and returns temporary credentials.
+
+🌐 OIDC / Web Identity Federation Example (e.g., Google, Cognito)
+
+🔁 Flow Summary:
+
+User → Login with Google/Facebook → Gets OIDC Token
+ → AWS STS AssumeRoleWithWebIdentity → Temporary AWS Credentials
+ → Access AWS
+
+ Example Boto3 Call:
+
+import boto3
+
+client = boto3.client('sts')
+
+response = client.assume_role_with_web_identity(
+    RoleArn='arn:aws:iam::123456789012:role/WebIdentityRole',
+    RoleSessionName='web-identity-session',
+    WebIdentityToken='ID_TOKEN_FROM_PROVIDER'
+)
+
+credentials = response['Credentials']
+
+✅ Benefits of Federated Access
+	•	🔐 No need to create IAM users
+	•	⏳ Temporary credentials reduce risk
+	•	🔄 SSO experience for enterprise users
+	•	🔍 Can use attribute-based access control (ABAC)
+
+
+ 
 
 
 
