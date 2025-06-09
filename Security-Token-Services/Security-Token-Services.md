@@ -701,10 +701,14 @@ response = client.assume_role_with_web_identity(
 credentials = response['Credentials']
 
 ✅ Benefits of Federated Access
-	•	🔐 No need to create IAM users
-	•	⏳ Temporary credentials reduce risk
-	•	🔄 SSO experience for enterprise users
-	•	🔍 Can use attribute-based access control (ABAC)
+	
+ •	🔐 No need to create IAM users
+	
+ •	⏳ Temporary credentials reduce risk
+	
+ •	🔄 SSO experience for enterprise users
+	
+ •	🔍 Can use attribute-based access control (ABAC)
 
 
  
