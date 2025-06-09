@@ -1,4 +1,4 @@
-- AWS STS capabilities (AssumeRole, GetSessionToken, etc.)
+- AWS STS capabilities (AssumeRole, GetSessionToken, Federated Access)
 
 AWS STS (AWS Security Token Service) is a web service that enables you to request temporary, limited-privilege credentials for AWS Identity and Access Management (IAM) users or for users that you authenticate (federated users).
 
