@@ -93,7 +93,7 @@ jobs:
   retrieve-token:
     runs-on: ubuntu-latest
 
-    steps:
+ steps:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -101,7 +101,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Get Session Token
+ - name: Get Session Token
       run: |
         SESSION_OUTPUT=$(aws sts get-session-token --duration-seconds 3600)
         echo "Session Token Output:"
@@ -175,7 +175,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Get Session Token with MFA
+- name: Get Session Token with MFA
       run: |
         echo "Requesting temporary session token with MFA"
         TOKEN_JSON=$(aws sts get-session-token \
@@ -183,12 +183,12 @@ jobs:
           --token-code ${{ secrets.AWS_MFA_CODE }} \
           --duration-seconds 3600)
 
-        echo "$TOKEN_JSON"
+   echo "$TOKEN_JSON"
         export AWS_ACCESS_KEY_ID=$(echo $TOKEN_JSON | jq -r '.Credentials.AccessKeyId')
         export AWS_SECRET_ACCESS_KEY=$(echo $TOKEN_JSON | jq -r '.Credentials.SecretAccessKey')
         export AWS_SESSION_TOKEN=$(echo $TOKEN_JSON | jq -r '.Credentials.SessionToken')
 
-        echo "Temporary credentials ready to use."
+   echo "Temporary credentials ready to use."
 
 ✅ AWS CodeBuild: With MFA (Advanced)
 
@@ -207,8 +207,8 @@ phases:
       - echo "Get MFA session token"
       - export MFA_CODE=123456  
       
-      # ⚠️ Replace with real-time input for actual use
-      - export MFA_ARN=arn:aws:iam::123456789012:mfa/your-user
+ # ⚠️ Replace with real-time input for actual use
+- export MFA_ARN=arn:aws:iam::123456789012:mfa/your-user
       - TOKEN_JSON=$(aws sts get-session-token \
           --serial-number $MFA_ARN \
           --token-code $MFA_CODE \
@@ -370,7 +370,7 @@ Or you can export directly from the script.
 
 You can modify the GitHub workflow to pull these credentials dynamically and load them:
 
-    - name: Load credentials from .env
+  - name: Load credentials from .env
       run: |
         source .env
         echo "Running with temporary session credentials"
@@ -404,20 +404,20 @@ def get_session_token(mfa_serial, mfa_code, duration=3600, profile_name="default
         session = boto3.Session(profile_name=profile_name, region_name=region)
         sts_client = session.client('sts')
 
-        response = sts_client.get_session_token(
+response = sts_client.get_session_token(
             DurationSeconds=duration,
             SerialNumber=mfa_serial,
             TokenCode=mfa_code
         )
 
-        creds = response['Credentials']
+ creds = response['Credentials']
         return {
             "AWS_ACCESS_KEY_ID": creds['AccessKeyId'],
             "AWS_SECRET_ACCESS_KEY": creds['SecretAccessKey'],
             "AWS_SESSION_TOKEN": creds['SessionToken']
         }
 
-    except ClientError as e:
+except ClientError as e:
         print(f"❌ Failed to get session token: {e}")
         exit(1)
 
@@ -435,21 +435,21 @@ def save_to_temp_profile(creds, profile="temp-session"):
 def main():
     print("🔐 AWS MFA Session Login")
 
-    mfa_serial = get_env_or_input("MFA_SERIAL", "Enter MFA ARN (e.g., arn:aws:iam::123456789012:mfa/your-user): ")
+mfa_serial = get_env_or_input("MFA_SERIAL", "Enter MFA ARN (e.g., arn:aws:iam::123456789012:mfa/your-user): ")
     mfa_code = get_env_or_input("MFA_CODE", "Enter MFA code: ")
 
-    profile = os.getenv("AWS_PROFILE", "default")
+ profile = os.getenv("AWS_PROFILE", "default")
     region = os.getenv("AWS_REGION", "us-east-1")
 
-    creds = get_session_token(mfa_serial, mfa_code, profile_name=profile, region=region)
+creds = get_session_token(mfa_serial, mfa_code, profile_name=profile, region=region)
 
-    print("✅ Got temporary session credentials")
+ print("✅ Got temporary session credentials")
 
-    save_to_env_file(creds)
+save_to_env_file(creds)
     save_to_temp_profile(creds)
 
-    print("\n✅ All done!")
-    print("👉 Use these in your terminal: `source .env`")
+ print("\n✅ All done!")
+    print("👉 Use these in your terminal:`source .env`")
     print("👉 Or use AWS CLI with: `--profile temp-session`")
 
 if __name__ == "__main__":
@@ -520,20 +520,20 @@ def get_session_token(mfa_serial, mfa_code, duration=3600, profile_name="default
         session = boto3.Session(profile_name=profile_name, region_name=region)
         sts_client = session.client('sts')
 
-        response = sts_client.get_session_token(
+response = sts_client.get_session_token(
             DurationSeconds=duration,
             SerialNumber=mfa_serial,
             TokenCode=mfa_code
         )
 
-        creds = response['Credentials']
+ creds = response['Credentials']
         return {
             "AWS_ACCESS_KEY_ID": creds['AccessKeyId'],
             "AWS_SECRET_ACCESS_KEY": creds['SecretAccessKey'],
             "AWS_SESSION_TOKEN": creds['SessionToken']
         }
 
-    except ClientError as e:
+except ClientError as e:
         print(f"❌ Failed to get session token: {e}")
         exit(1)
 
@@ -551,21 +551,20 @@ def save_to_temp_profile(creds, profile="temp-session"):
 def main():
     print("🔐 AWS MFA Session Login")
 
-    mfa_serial = get_env_or_input("MFA_SERIAL", "Enter MFA ARN (e.g., arn:aws:iam::123456789012:mfa/your-user): ")
+ mfa_serial = get_env_or_input("MFA_SERIAL", "Enter MFA ARN (e.g., arn:aws:iam::123456789012:mfa/your-user): ")
     mfa_code = get_env_or_input("MFA_CODE", "Enter MFA code: ")
 
-    profile = os.getenv("AWS_PROFILE", "default")
+ profile = os.getenv("AWS_PROFILE", "default")
     region = os.getenv("AWS_REGION", "us-east-1")
 
-    creds = get_session_token(mfa_serial, mfa_code, profile_name=profile, region=region)
+ creds = get_session_token(mfa_serial, mfa_code, profile_name=profile, region=region)
 
-    print("✅ Got temporary session credentials")
+print("✅ Got temporary session credentials")
 
-    save_to_env_file(creds)
-    save_to_temp_profile(creds)
+save_to_env_file(creds) save_to_temp_profile(creds)
 
-    print("\n✅ All done!")
-    print("👉 Use: `source .env` or `--profile temp-session`")
+print("\n✅ All done!")
+print("👉 Use: `source .env` or `--profile temp-session`")
 
 if __name__ == "__main__":
     main()
