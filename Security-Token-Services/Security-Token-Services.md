@@ -705,7 +705,9 @@ response = client.assume_role_with_web_identity(
 
 credentials = response['Credentials']
 
+
 ✅ Benefits of Federated Access
+
 	
  •	🔐 No need to create IAM users
 	
