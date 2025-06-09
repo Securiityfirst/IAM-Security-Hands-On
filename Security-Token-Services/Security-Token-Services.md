@@ -17,10 +17,14 @@ AWS STS (AWS Security Token Service) is a web service that enables you to reques
 ![image](https://github.com/user-attachments/assets/5b75928c-28bd-451d-be35-909f70f10467)
 
 🛡️ Security Considerations
-	•	Temporary credentials are short-lived (15 mins to 12 hours).
-	•	Use MFA for GetSessionToken to enforce strong authentication.
-	•	Control access with trust policies on roles.
-	•	Use condition keys like aws:RequestedRegion, aws:SourceIp, aws:MultiFactorAuthPresent.
+	
+ •	Temporary credentials are short-lived (15 mins to 12 hours).
+	
+ •	Use MFA for GetSessionToken to enforce strong authentication.
+	
+ •	Control access with trust policies on roles.
+	
+ •	Use condition keys like aws:RequestedRegion, aws:SourceIp, aws:MultiFactorAuthPresent.
 
 📌 Example: AssumeRole CLI
 
