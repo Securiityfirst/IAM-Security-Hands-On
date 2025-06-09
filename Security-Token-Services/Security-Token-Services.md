@@ -282,7 +282,8 @@ echo "✅ Credentials saved to AWS profile: temp-session"
 ⸻
 
 🚀 How to Use
-	1.	Save the script as get_aws_session_token.sh
+
+  1. Save the script as get_aws_session_token.sh
   2. run it 
 
 chmod +x get_aws_session_token.sh
@@ -321,6 +322,7 @@ export AWS_SECRET_ACCESS_KEY=$(echo $TOKEN_JSON | jq -r '.Credentials.SecretAcce
 export AWS_SESSION_TOKEN=$(echo $TOKEN_JSON | jq -r '.Credentials.SessionToken')
 
 # Save to .env
+
 cat <<EOF > .env
 AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
