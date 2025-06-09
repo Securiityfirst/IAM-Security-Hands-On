@@ -34,7 +34,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 - 🛡️ Grant AWS Managed Policies (AMP)
 
 ### 6. Security Token Services(STS)
-- 🖼️ **[Screenshots]** Displaying AWS STS capabilities (AssumeRole, GetSessionToken, etc.)
+- 🖼️ **[Screenshots]** Displaying AWS STS capabilities (AssumeRole, GetSessionToken, Federated Access)
 
 ### 7. MFA Setup(MFA)
 - 🔐 Configure and display Multi-Factor Authentication 
