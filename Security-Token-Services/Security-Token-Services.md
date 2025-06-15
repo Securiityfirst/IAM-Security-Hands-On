@@ -500,10 +500,19 @@ cd aws_mfa_login
 structure it like this:
 
 aws_mfa_login/
+
 ├── aws_mfa_login/
+
 │   └── __main__.py         # Entry point
-├── setup.py                # Packaging script
-├── README.md               # Docs (optional)
+
+├── setup.py                # Packaging 
+
+script
+
+├── README.md               # Docs 
+
+(optional)
+
 ├── requirements.txt        # Dependencies
 
 2. 🧠 Your CLI Code (aws_mfa_login/__main__.py)
