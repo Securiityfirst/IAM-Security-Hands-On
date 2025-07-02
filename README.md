@@ -41,7 +41,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 
 ### 8. IAM Policies Overview(IAMPO)
 - 🔍 Inline and AWS managed policies
-- 🔍 Custome managed policies
+- 🔍 custom managed policies
 - 🔍 Identity-Based vs Resource-Based Policies (IBP vs RBP)
 - 🧩 Access Control: Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC)
 - 🧱 Apply Permission Boundaries (PB)
