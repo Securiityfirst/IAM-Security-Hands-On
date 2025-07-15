@@ -23,7 +23,12 @@ https://signin.aws.amazon.com/signup?request_type=register
 <img width="1284" height="1038" alt="image" src="https://github.com/user-attachments/assets/9c2a5db3-0bb0-4fb2-b326-0ba46c806330" />
 
 ###  Cost and Billing(C&B)
-- 💰 Setup and display billing alarms
+
+- 💰 Setup and display billing alarms(AWS Cost Anomaly Detection)
+
+Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is a cost management service that helps you reduce cost surprises and enhance control without slowing innovation. It uses advanced machine learning models to detect and alert on anomalous spend patterns across your deployed AWS services. Monitors and sends daily email alerts about your Aws resources.
+
+<img width="1284" height="2382" alt="image" src="https://github.com/user-attachments/assets/27c732e2-4f38-4903-b16d-caa0fcb1a667" />
 
 ###  AWS Authentication Methods(AAM)
   
