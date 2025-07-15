@@ -30,6 +30,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 
 <img width="1284" height="2382" alt="image" src="https://github.com/user-attachments/assets/27c732e2-4f38-4903-b16d-caa0fcb1a667" />
 
+
 ###  AWS Authentication Methods(AAM)
   
 ![image](https://github.com/user-attachments/assets/d37e7db4-a2c1-4f37-81b6-e59d74087e61)
