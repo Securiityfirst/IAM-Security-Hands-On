@@ -12,7 +12,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
   
 ## 📚 Training Topics Covered  
 
-### 1. AWS Account Setup(AAS)
+### . AWS Account Setup(AAS)
 
 - ✅ Create a new AWS Account
 
@@ -27,30 +27,27 @@ https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
 
 <img width="1284" height="1038" alt="image" src="https://github.com/user-attachments/assets/9c2a5db3-0bb0-4fb2-b326-0ba46c806330" />
 
-### 2. Cost and Billing(C&B)
+### . Cost and Billing(C&B)
 - 💰 Setup and display billing alarms
 
-### 3. AWS Authentication Methods(AAM)
+### . AWS Authentication Methods(AAM)
 - 📊 **[Diagram]** of AWS Authentication Methods (AAM)
 
-### 4. IAM Core Components(IAMCC)
+### . IAM Core Components(IAMCC)
 - 👤 Create IAM Users
 - 📄 Create and attach IAM Policies
 - 🧑‍💼 Create IAM Roles
 - 👥 Create IAM User Groups
 
-### 5. IAM Permissions Management(IAMPM)
+### . IAM Permissions Management(IAMPM)
 - 🛡️ Grant custom policies
 - 🛡️ Grant IAM roles
 - 🛡️ Grant AWS Managed Policies (AMP)
 
-### 6. Security Token Services(STS)
+### . Security Token Services(STS)
 - 🖼️ AWS STS capabilities (AssumeRole, GetSessionToken, Federated Access)
 
-### 7. MFA Setup(MFA)
-- 🔐 Configure and display Multi-Factor Authentication 
-
-### 8. IAM Policies Overview(IAMPO)
+### . IAM Policies Overview(IAMPO)
 - 🔍 Inline and AWS managed policies
 - 🔍 custom managed policies
 - 🔍 Identity-Based vs Resource-Based Policies (IBP vs RBP)
@@ -59,38 +56,38 @@ https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
 - 🧠 IAM Policy Evaluation Logic (IPE)
 - 🧬 IAM Policy Structure (IPS)
 
-### 9. Policy Tools(PT)
+### . Policy Tools(PT)
 - ⚙️ AWS Policy Generator (APG)
 - 🧪 IAM Policy Simulator (IPSI)
 
 
 ## 🏢 AWS Organizations & SCP(AO&SCP)
 
-### 10. Organizations & Management
+### . Organizations & Management
 - 🏗️ Create AWS Organization
 - 🗂️ Create Organizational Units (OU)
 
-### 11. Service Control Policies (SCP)
+### . Service Control Policies (SCP)
 - 🚫 Restrict EC2 Instance Types
 - 🔒 Prevent S3 Bucket Deletion
   
 
 ## 🔁 IAM Advanced Use Cases(IAMUC)
 
-### 12. IAM Roles: Use Cases
+### . IAM Roles: Use Cases
 - 📄 IAM Role use cases
 - 🔄 Cross-account access to S3 with `aws:AssumeRole`
 
-### 13. EC2 Instance Profiles(EIP)
+### . EC2 Instance Profiles(EIP)
 - 🧳 Use Amazon EC2 Instance Profiles for service access
 
 
 ## 🗃️ AWS Directory and Identity Services (AD&IS)
 
-### 14. Directory Services
+### . Directory Services
 - 📂 AWS Managed Microsoft Active Directory
 
-### 15. Federation & SSO
+### . Federation & SSO
 - 🌐 AWS Identity Federation (AIF)
 - 🌐 IAM Identity Federation (IAMIF)
 - 🧑‍🤝‍🧑 IAM Identity Center (IAM ID Center)
