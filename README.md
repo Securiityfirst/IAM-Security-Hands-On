@@ -26,7 +26,6 @@ https://signin.aws.amazon.com/signup?request_type=register
 - 💰 Setup and display billing alarms
 
 ###  AWS Authentication Methods(AAM)
-- 📊 **[Diagram]** of AWS Authentication Methods (AAM)
   
 ![image](https://github.com/user-attachments/assets/d37e7db4-a2c1-4f37-81b6-e59d74087e61)
 
