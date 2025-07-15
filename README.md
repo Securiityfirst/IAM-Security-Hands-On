@@ -12,7 +12,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
   
 ## 📚 Training Topics Covered  
 
-### . AWS Account Setup(AAS)
+###  AWS Account Setup(AAS)
 
 - ✅ Create a new AWS Account
 
@@ -27,27 +27,27 @@ https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
 
 <img width="1284" height="1038" alt="image" src="https://github.com/user-attachments/assets/9c2a5db3-0bb0-4fb2-b326-0ba46c806330" />
 
-### . Cost and Billing(C&B)
+###  Cost and Billing(C&B)
 - 💰 Setup and display billing alarms
 
-### . AWS Authentication Methods(AAM)
+###  AWS Authentication Methods(AAM)
 - 📊 **[Diagram]** of AWS Authentication Methods (AAM)
 
-### . IAM Core Components(IAMCC)
+###  IAM Core Components(IAMCC)
 - 👤 Create IAM Users
 - 📄 Create and attach IAM Policies
 - 🧑‍💼 Create IAM Roles
 - 👥 Create IAM User Groups
 
-### . IAM Permissions Management(IAMPM)
+###  IAM Permissions Management(IAMPM)
 - 🛡️ Grant custom policies
 - 🛡️ Grant IAM roles
 - 🛡️ Grant AWS Managed Policies (AMP)
 
-### . Security Token Services(STS)
+###  Security Token Services(STS)
 - 🖼️ AWS STS capabilities (AssumeRole, GetSessionToken, Federated Access)
 
-### . IAM Policies Overview(IAMPO)
+###  IAM Policies Overview(IAMPO)
 - 🔍 Inline and AWS managed policies
 - 🔍 custom managed policies
 - 🔍 Identity-Based vs Resource-Based Policies (IBP vs RBP)
@@ -56,38 +56,38 @@ https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
 - 🧠 IAM Policy Evaluation Logic (IPE)
 - 🧬 IAM Policy Structure (IPS)
 
-### . Policy Tools(PT)
+###  Policy Tools(PT)
 - ⚙️ AWS Policy Generator (APG)
 - 🧪 IAM Policy Simulator (IPSI)
 
 
 ## 🏢 AWS Organizations & SCP(AO&SCP)
 
-### . Organizations & Management
+###  Organizations & Management
 - 🏗️ Create AWS Organization
 - 🗂️ Create Organizational Units (OU)
 
-### . Service Control Policies (SCP)
+###  Service Control Policies (SCP)
 - 🚫 Restrict EC2 Instance Types
 - 🔒 Prevent S3 Bucket Deletion
   
 
 ## 🔁 IAM Advanced Use Cases(IAMUC)
 
-### . IAM Roles: Use Cases
+###  IAM Roles: Use Cases
 - 📄 IAM Role use cases
 - 🔄 Cross-account access to S3 with `aws:AssumeRole`
 
-### . EC2 Instance Profiles(EIP)
+###  EC2 Instance Profiles(EIP)
 - 🧳 Use Amazon EC2 Instance Profiles for service access
 
 
 ## 🗃️ AWS Directory and Identity Services (AD&IS)
 
-### . Directory Services
+###  Directory Services
 - 📂 AWS Managed Microsoft Active Directory
 
-### . Federation & SSO
+###  Federation & SSO
 - 🌐 AWS Identity Federation (AIF)
 - 🌐 IAM Identity Federation (IAMIF)
 - 🧑‍🤝‍🧑 IAM Identity Center (IAM ID Center)
