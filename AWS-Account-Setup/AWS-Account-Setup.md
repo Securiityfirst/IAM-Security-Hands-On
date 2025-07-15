@@ -1,7 +1,12 @@
 - ✅ Create a new AWS Account
 
-###Add screenshots
+https://signin.aws.amazon.com/signup?request_type=register
 
-- 🔐 Save and delete root token securely
+https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
 
-###Add screenshots
+https://signin.aws.amazon.com/v2/assets/signup-bg-light.png
+
+
+- 🔐 Save and delete root token securely(Make sure all security recommendations are followed)
+
+
