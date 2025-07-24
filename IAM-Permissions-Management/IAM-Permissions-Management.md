@@ -4,6 +4,7 @@
 
 - 🛡️ Grant custom policies
 
+Generate policy based on CloudTrail “User Api /Assumerole Api calls” events or using  IAM Access analyzer, AWS policy generator or IAM Policy Simulator.
 
 
 - 🛡️ Grant IAM roles
