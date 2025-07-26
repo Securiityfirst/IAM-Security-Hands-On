@@ -16,7 +16,7 @@ Welcome to the **AWS IAM Security Hands-On Practice** lab repository. This train
 
 - ✅ Create a new AWS Account
 
-     https://signin.aws.amazon.com/signup?      request_type=register
+https://signin.aws.amazon.com/signup?     request_type=register
 
 - 🔐 Save and delete root token securely(Make sure all security recommendations are followed)
 
