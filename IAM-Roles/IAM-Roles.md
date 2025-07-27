@@ -12,6 +12,115 @@
 
 
 
-  
-- 🔄 Cross-account access to S3 with aws:AssumeRole
 
+  
+- Cross-account access to S3 with aws:AssumeRole
+
+  To set up cross-account access to an S3 bucket using AWS:AssumeRole, follow these steps. 
+
+Prerequisites (2 Aws Accounts A&B)
+
+	•	Account A (ID: 246368586877) owns the S3 bucket
+
+	•	Account B (ID: 654327875444) needs to access the bucket using AssumeRole
+
+
+✅ Step 1: Create a Role in Account A (S3 Owner)
+
+
+This role will be assumed by Account B.
+
+
+IAM Role Trust Policy (Account A)
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::222222222222:root"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+
+IAM Role Permissions (Account A)
+
+Attach a policy to allow access to the S3 bucket.
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::my-bucket-name",
+        "arn:aws:s3:::my-bucket-name/*"
+      ]
+    }
+  ]
+}
+
+✅ Step 2: Allow Role Access in the S3 Bucket Policy (Account A)
+
+Update the S3 bucket policy to allow the role access:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CrossAccountAssumeRoleAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::111111111111:role/CrossAccountS3AccessRole"
+      },
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::my-bucket-name",
+        "arn:aws:s3:::my-bucket-name/*"
+      ]
+    }
+  ]
+}
+
+✅ Step 3: Assume the Role in Account B
+
+Python (Boto3)
+
+import boto3
+
+# Step 1: Assume the role
+sts_client = boto3.client('sts')
+
+assumed_role = sts_client.assume_role(
+    RoleArn="arn:aws:iam::111111111111:role/CrossAccountS3AccessRole",
+    RoleSessionName="CrossAccountS3Session"
+)
+
+credentials = assumed_role['Credentials']
+
+# Step 2: Use the temporary credentials to access S3
+
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=credentials['AccessKeyId'],
+    aws_secret_access_key=credentials['SecretAccessKey'],
+    aws_session_token=credentials['SessionToken']
+)
+
+# Example: List objects
+
+response = s3_client.list_objects_v2(Bucket='my-bucket-name')
+for obj in response.get('Contents', []):
+    print(obj['Key'])
+
+    
