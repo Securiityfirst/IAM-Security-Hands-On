@@ -1,9 +1,13 @@
 - 🧳 Use Amazon EC2 Instance Profiles for service access
 
 To create an EC2 instance profile in AWS, you need to:
+
 	1.	Create an IAM Role with a trust policy for EC2.
+ 
 	2.	Attach IAM policies to the role (e.g., S3 access, CloudWatch logs, etc.).
+ 
 	3.	Create the instance profile and associate the IAM role with it.
+ 
 	4.	Attach the instance profile to an EC2 instance.
 
 You can do this using the AWS CLI, Console, or Infrastructure as Code (e.g., Terraform or CloudFormation). Below is the AWS CLI method:
@@ -56,10 +60,15 @@ aws iam attach-role-policy \
 ✅ Terraform 
 
 -This includes:
+
 	•	IAM role (trusted by EC2)
+ 
 	•	IAM policy attachment
+ 
 	•	Instance profile
+ 
 	•	EC2 instance using the profile
+ 
 
 - In the repository create main.tf file 
 
