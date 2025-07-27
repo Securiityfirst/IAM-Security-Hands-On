@@ -10,7 +10,7 @@ You can do this using the AWS CLI, Console, or Infrastructure as Code (e.g., Ter
 
 Step-by-Step via AWS CLI
 
--Create the IAM Role
+1. Create the IAM Role
 
    aws iam create-role \
   --role-name EC2InstanceRole \
@@ -26,7 +26,7 @@ Step-by-Step via AWS CLI
   }'
 
 
--Attach a Policy to the Role
+2. Attach a Policy to the Role
 
 Test case: Allow EC2 access to S3
 
@@ -34,18 +34,18 @@ aws iam attach-role-policy \
   --role-name EC2InstanceRole \
   --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
 
--Create the Instance Profile
+3. Create the Instance Profile
 
    aws iam create-instance-profile \
   --instance-profile-name EC2InstanceProfile
 
--Add the Role to the Instance Profile
+4. Add the Role to the Instance Profile
 
    aws iam add-role-to-instance-profile \
   --instance-profile-name EC2InstanceProfile \
   --role-name EC2InstanceRole
 
--Attach Instance Profile to an EC2 Instance
+5. Attach Instance Profile to an EC2 Instance
 
  Use the EC2 Console or CLI when launching or modifying the instance:
 
@@ -61,7 +61,7 @@ aws iam attach-role-policy \
 	•	Instance profile
 	•	EC2 instance using the profile
 
--In the repository create main.tf file 
+- In the repository create main.tf file 
 
  provider "aws" {
   region = "us-east-1"  # Change to your region
@@ -104,9 +104,10 @@ resource "aws_instance" "example" {
 }
 
 
--Deploy
+- Deploy
 
 terraform init
+
 terraform apply
 
 
