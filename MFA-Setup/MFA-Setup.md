@@ -1,4 +1,4 @@
-- 🔐 Configure and display Multi-Factor Authentication  (using Google Authenticator app)
+-  Configure and display Multi-Factor Authentication  (using Google Authenticator app)
 
 <img width="1284" height="957" alt="image" src="https://github.com/user-attachments/assets/8d073e4f-78ea-4fc0-9590-2e7ce70b2dcc" />
 
