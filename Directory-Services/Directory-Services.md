@@ -1,5 +1,5 @@
 
-- 📂 AWS Managed Microsoft Active Directory
+-  AWS Managed Microsoft Active Directory
 (complete setup once u get finance)
 
 <img width="1284" height="888" alt="image" src="https://github.com/user-attachments/assets/2f7ecded-8991-4462-a3b8-7442db592452" />
