@@ -2,12 +2,12 @@
 • Policies = Permissions (what you can do)
 •	Roles = Identities (who/what assumes the role with certain permissions)
 
-- 🛡️ Grant custom policies
+-  Grant custom policies
 
 Generate policy based on CloudTrail “User Api /Assumerole Api calls” events or using  IAM Access analyzer, AWS policy generator or IAM Policy Simulator.
 
 
-- 🛡️ Grant IAM roles
+-  Grant IAM roles
   
 <img width="1284" height="922" alt="image" src="https://github.com/user-attachments/assets/423fbe33-7738-4548-bb12-81767971408f" />
 
@@ -19,7 +19,7 @@ Generate policy based on CloudTrail “User Api /Assumerole Api calls” events 
 
 
  
-- 🛡️ Grant AWS Managed Policies (AMP)
+-  Grant AWS Managed Policies (AMP)
   
 <img width="2778" height="1284" alt="image" src="https://github.com/user-attachments/assets/9708fe43-2b2d-44a5-8e1a-86d107fa7153" />
 
