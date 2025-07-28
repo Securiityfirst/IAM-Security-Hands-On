@@ -1,5 +1,4 @@
-- ⚙️ AWS Policy Generator (APG)
-- 🧪 IAM Policy Simulator (IPSI)
+-  AWS Policy Generator (APG)
+-  IAM Policy Simulator (IPSI)
 
-###Add screenshots
 
