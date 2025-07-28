@@ -1,5 +1,5 @@
 
-- 💰 Setup and display billing alarms
+-  Setup and display billing alarms
 
 <img width="1284" height="2778" alt="image" src="https://github.com/user-attachments/assets/45ab1067-2642-41c8-87a2-fb3c44de7ad1" />
 
