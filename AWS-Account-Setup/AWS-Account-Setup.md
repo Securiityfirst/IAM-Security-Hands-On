@@ -1,4 +1,4 @@
-- ✅ Create a new AWS Account
+- Create a new AWS Account
 
 https://signin.aws.amazon.com/signup?request_type=register
 
