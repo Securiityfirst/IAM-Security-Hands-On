@@ -25,7 +25,7 @@ Prerequisites (2 Aws Accounts A&B)
 	•	Account B (ID: 654327875444) needs to access the bucket using AssumeRole
 
 
-✅ Step 1: Create a Role in Account A (S3 Owner)
+ Step 1: Create a Role in Account A (S3 Owner)
 
 
 This role will be assumed by Account B.
@@ -67,7 +67,7 @@ Attach a policy to allow access to the S3 bucket.
   ]
 }
 
-✅ Step 2: Allow Role Access in the S3 Bucket Policy (Account A)
+ Step 2: Allow Role Access in the S3 Bucket Policy (Account A)
 
 Update the S3 bucket policy to allow the role access:
 
@@ -92,7 +92,7 @@ Update the S3 bucket policy to allow the role access:
   ]
 }
 
-✅ Step 3: Assume the Role in Account B
+ Step 3: Assume the Role in Account B
 
 Python (Boto3)
 
