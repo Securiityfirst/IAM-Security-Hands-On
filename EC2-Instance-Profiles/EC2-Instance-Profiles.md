@@ -1,4 +1,4 @@
-- 🧳 Use Amazon EC2 Instance Profiles for service access
+-  Use Amazon EC2 Instance Profiles for service access
 
 To create an EC2 instance profile in AWS, you need to:
 
@@ -57,7 +57,7 @@ aws iam attach-role-policy \
   --instance-id i-0123456789abcdef0 \
   --iam-instance-profile Name=EC2InstanceProfile
 
-✅ Terraform 
+ Terraform 
 
 -This includes:
 
