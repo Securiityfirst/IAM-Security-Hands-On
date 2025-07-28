@@ -1,4 +1,4 @@
-- 🏗️ Create AWS Organization
+-  Create AWS Organization
 
 <img width="1284" height="2319" alt="image" src="https://github.com/user-attachments/assets/d654a439-f1d2-46de-b4ae-315a0d49d88a" />
 
@@ -27,6 +27,6 @@
 
 
   
-- 🗂️ Create Organizational Units (OU)
+-  Create Organizational Units (OU)
 
-###Add screenshots
+
