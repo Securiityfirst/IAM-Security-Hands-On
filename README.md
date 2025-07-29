@@ -74,7 +74,10 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 # Service Control Policies (SCP)
 -  Restrict EC2 Instance Types
 -  Prevent S3 Bucket Deletion
-  
+
+# Resource Control Policies
+
+- Restrict Identities based access on Aws resources
 
 # IAM Advanced Use Cases(IAMUC)
 
