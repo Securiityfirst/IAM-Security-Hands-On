@@ -77,7 +77,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 
 # Resource Control Policies
 
-- Restrict Identities based access on Aws resources (delegated administrator)
+- Restrict Identity based access on Aws resources (delegated administrator)
 
 # IAM Advanced Use Cases(IAMUC)
 
