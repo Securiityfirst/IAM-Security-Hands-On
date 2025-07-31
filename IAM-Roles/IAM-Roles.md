@@ -67,9 +67,10 @@ Attach a policy to allow access to the S3 bucket.
   ]
 }
 
- Step 2: Allow Role Access in the S3 Bucket Policy (Account A)
+ Step 2: Allow Role Access in the S3 Bucket Policy (Account A) 
 
-Update the S3 bucket policy to allow the role access:
+Update the S3 bucket policy to allow the role access:  (   "Sid": "CrossAccountAssumeRoleAccess" )
+
 
 {
   "Version": "2012-10-17",
