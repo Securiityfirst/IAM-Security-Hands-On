@@ -460,7 +460,7 @@ def save_to_env_file(creds, env_path=".env"):
         set_key(env_path, key, val)
 
 def save_to_temp_profile(creds, profile="temp-session"):
-    print(f"🧾 Writing to AWS CLI profile: {profile}")
+    print(f" Writing to AWS CLI profile: {profile}")
     subprocess.run(["aws", "configure", "set", "aws_access_key_id", creds["AWS_ACCESS_KEY_ID"], "--profile", profile])
     subprocess.run(["aws", "configure", "set", "aws_secret_access_key", creds["AWS_SECRET_ACCESS_KEY"], "--profile", profile])
     subprocess.run(["aws", "configure", "set", "aws_session_token", creds["AWS_SESSION_TOKEN"], "--profile", profile])
