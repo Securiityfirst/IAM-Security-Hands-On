@@ -65,7 +65,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 -  IAM Policy Simulator (IPSI)
 
 
-# AWS Organizations & SCP(AO&SCP)
+# AWS Organizations, SCP&RCP(AO,SCP&RPC)
 
 # Organizations & Management
 -  Create AWS Organization
