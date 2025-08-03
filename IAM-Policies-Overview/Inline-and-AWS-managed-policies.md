@@ -4,7 +4,6 @@
 	•	Inline policies are embedded directly into a single IAM identity (user, group, or role).
 	•	The policy is tightly coupled with the identity
 
-***** Add screenshot *****
 
 
 2. AWS Managed Policies
@@ -13,7 +12,6 @@
 	•	Predefined policies created and managed by AWS.
 	•	Can be attached to multiple identities.
 
-***** Add screenshot *****
 
  Example Use Case:
 
@@ -40,11 +38,9 @@ Assigning AmazonS3ReadOnlyAccess to all analysts who only need to read data from
   
 -  Apply Permission Boundaries (PB)
 
-###Add screenshots
   
 -  IAM Policy Evaluation Logic (IPE)
 
-###Add screenshots
 
 -  IAM Policy Structure (IPS)
 
