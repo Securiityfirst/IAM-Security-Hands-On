@@ -75,7 +75,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 -  Restrict EC2 Instance Types
 -  Prevent S3 Bucket Deletion
 
-# Resource Control Policies
+# Resource Control Policies (RCP)
 
 - Restrict Identity based access on Aws resources (delegated administrator)
 
