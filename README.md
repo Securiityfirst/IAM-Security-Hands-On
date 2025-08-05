@@ -77,7 +77,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 
 # Resource Control Policies (RCP)
 
-- Restrict Identity based access on Aws resources (delegated administrator)
+- Restrict Identity based access on Aws resources (delegated administrator) intergration with Aws Resource Access Manager(RAM), Control Tower.
 
 # IAM Advanced Use Cases(IAMUC)
 
