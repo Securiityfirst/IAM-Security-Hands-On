@@ -63,7 +63,8 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 # Policy Tools(PT)
 -  AWS Policy Generator (APG)
 -  IAM Policy Simulator (IPSI)
--  Aws Access Analyzer 
+-  Aws Access Analyzer (Generate  least privilege policies based on user activity)
+
 
 # AWS Organizations, SCP&RCP(AO,SCP&RCP)
 
