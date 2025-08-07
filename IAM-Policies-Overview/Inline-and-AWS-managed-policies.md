@@ -33,7 +33,7 @@ Assigning AmazonS3ReadOnlyAccess to all analysts who only need to read data from
 -  Identity-Based vs Resource-Based Policies (IBP vs RBP)
   
   
--  Access Control: Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC)
+-  Access Control: Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC) (Federated Access)
 
   
 -  Apply Permission Boundaries (PB)
