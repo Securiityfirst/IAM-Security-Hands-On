@@ -81,6 +81,11 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
 
 - Restrict Identity based access on Aws resources (delegated administrator) intergration with Aws Resource Access Manager(RAM), Control Tower.
 
+# Management Policies
+
+AWS Managed Policies — pre-built, maintained IAM policies created by AWS to help you assign permissions without having to write your own from scratch.
+
+
 # IAM Advanced Use Cases(IAMUC)
 
 # IAM Roles: Use Cases
