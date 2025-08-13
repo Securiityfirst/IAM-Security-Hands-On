@@ -72,7 +72,11 @@ Example JSON (resource-based, S3 bucket policy):
   ]
 }
 
-<img width="2778" height="1284" alt="image" src="https://github.com/user-attachments/assets/e24dd720-6056-44d3-8a82-8ecddd4d6f7d" />
+Key Differences Table
+
+<img width="2342" height="759" alt="image" src="https://github.com/user-attachments/assets/c0179648-f95e-4ee2-8bab-98d9dc212acc" />
+
+
 
 AWS evaluates access by checking:
 
