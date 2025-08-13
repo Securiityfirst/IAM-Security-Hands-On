@@ -67,7 +67,7 @@ Configure AWS Cost Anomaly Detection for your account. Cost Anomaly Detection is
   
 
 
-# AWS Organizations, SCP&RCP(AO,SCP&RCP)
+# AWS Organizations (AO, SCP, RCP, MP)
 
 # Organizations & Management
 -  Create AWS Organization
