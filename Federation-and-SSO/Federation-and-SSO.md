@@ -149,6 +149,149 @@ Test the Federation Login
 
 # IAM Identity Federation (IAMIF)
 
+IAM Identity Federation in AWS is a way to let users sign in to your AWS environment using credentials from an external identity provider (IdP) instead of creating and managing IAM users directly in AWS.
+
+In other words:
+
+Instead of giving everyone in your organization their own IAM username/password in AWS, you connect AWS to a trusted identity source (like your company’s Microsoft Entra ID / Azure AD, Okta, Google Workspace, or even another AWS account) and federate their identities.
+
+
+Key Ideas
+
+	•	Federation = Trust relationship between AWS and an external IdP.
+ 
+	•	No AWS permanent credentials for the user — they get temporary credentials via AWS Security Token Service (STS).
+ 
+	•	Users authenticate with the IdP, and AWS trusts that authentication.
+ 
+	•	Good for SSO (Single Sign-On) and avoiding duplicated account management.
+
+
+How It Works (High Level Flow)
+
+	1.	User logs in to your external IdP (e.g., Okta, Entra ID) using their existing credentials.
+ 
+	2.	The IdP authenticates the user and sends a security assertion (SAML or OIDC token) to AWS.
+ 
+	3.	AWS STS exchanges that assertion for temporary credentials.
+ 
+	4.	User uses these credentials to access AWS resources based on assigned IAM roles and policies.
+ 
+<img width="2778" height="790" alt="image" src="https://github.com/user-attachments/assets/3c811b71-98fc-414d-ba06-9c18fd3f8e59" />
+
+
+⸻
+
+Why Use IAM Federation?
+
+	•	Centralized user management in your existing IdP.
+ 
+	•	Avoids AWS credential sprawl.
+ 
+	•	Supports MFA from your IdP.
+ 
+	•	Simplifies compliance by having one source of identity truth.
+ 
+
+Common AWS Services Involved
+
+	•	AWS IAM → Role creation, trust policies.
+ 
+	•	AWS STS → Issues temporary credentials.
+ 
+	•	AWS SSO (IAM Identity Center) → Easier setup for workforce federation.
+ 
+	•	Amazon Cognito → Federation for applications you build.
+
+practical example of AWS IAM Identity Federation using Microsoft Entra ID (Azure AD) as the Identity Provider via SAML 2.0.
+
+
+
+Scenario
+
+You have an organization using Microsoft 365 with Entra ID as the IdP, and you want employees to log in to the AWS Management Console without AWS-native IAM users — instead, they’ll use their Entra ID credentials.
+
+
+Step-by-Step Setup
+
+1. Plan Roles & Permissions
+
+Decide what roles you’ll need in AWS:
+
+	•	AWS-Admin → Full admin access.
+ 
+	•	AWS-ReadOnly → Read-only access.
+
+
+2. Create IAM Roles in AWS
+   
+	1.	Go to IAM → Roles → Create Role.
+    
+	2.	Select SAML 2.0 federation.
+    
+	3.	If no IdP exists yet, click Create New SAML Provider:
+    
+	•	Name: EntraID
+
+	•	Upload the federation metadata XML file from Entra ID.
+
+	4.	Create a role (e.g., AWS-Admin) with the required policy (e.g., AdministratorAccess).
+    
+	5.	In the Trust Policy, AWS will trust arn:aws:iam::<account_id>:saml-provider/EntraID.
+
+
+3. Configure Microsoft Entra ID
+   
+	1.	Go to Azure Portal → Enterprise Applications → New Application.
+ 	
+	2.	Add an AWS Single Sign-On app from the gallery.
+    
+	3.	Configure SAML:
+ 
+	•	Identifier (Entity ID): urn:amazon:webservices
+
+	•	Reply URL (ACS URL): https://signin.aws.amazon.com/saml
+
+	4.	Upload AWS’s metadata XML (from the AWS SAML provider you created earlier).
+    
+	5.	In Attributes & Claims:
+    
+	•	Add https://aws.amazon.com/SAML/Attributes/Role → role_arn,principal_arn
+
+Example:
+
+arn:aws:iam::<account_id>:role/AWS-Admin,arn:aws:iam::<account_id>:saml-provider/EntraID
+
+	6.	Assign users/groups to the AWS app in Entra ID.
+
+
+4. Test the Federation
+   
+	1.	Sign in to your Microsoft Entra MyApps portal.
+    
+	2.	Click the AWS application.
+    
+	3.	Entra ID authenticates you and sends a SAML assertion to AWS.
+    
+	4.	AWS STS issues temporary credentials mapped to the IAM role you were assigned.
+    
+	5.	You land in the AWS Management Console — no AWS password required.
+
+Flow Summary
+
+User → Entra ID login → SAML Assertion → AWS STS → Temporary Credentials → AWS Console/CLI
+
+Security Notes
+
+	•	Always enable MFA on your IdP for extra protection.
+ 
+	•	Use least privilege when assigning AWS roles.
+ 
+	•	Monitor AWS CloudTrail for AssumeRoleWithSAML events.
+
+<img width="1284" height="766" alt="image" src="https://github.com/user-attachments/assets/477c5a8c-7aa2-4362-8700-81868c0c1a50" />
+
+
 
 # IAM Identity Center (IAM ID Center)
 
