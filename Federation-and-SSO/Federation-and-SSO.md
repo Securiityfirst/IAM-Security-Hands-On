@@ -454,3 +454,86 @@ Settings → User portal → Copy URL.
   # Configure AWS SSO using AWS Managed AD
 
 
+1. Prerequisites
+   
+	•	An AWS Managed Microsoft AD directory already deployed in your VPC (via AWS Directory Service).
+
+	•	Network connectivity between AWS Managed AD and the IAM Identity Center service:
+
+	•	Correct VPC, subnets, and security groups.
+
+	•	Allow TCP 389 (LDAP), TCP 636 (LDAPS), TCP/UDP 88 (Kerberos), TCP/UDP 464 (Kerberos password change), and TCP/UDP 53 (DNS).
+
+	•	An Active Directory user account with permissions to read users and groups in your directory (for binding IAM Identity Center).
+
+
+3. Enable IAM Identity Center
+   
+	1.	Go to AWS Console → IAM Identity Center.
+    
+	2.	Click Enable (if not already enabled).
+    
+	3.	Select the Region where you want IAM Identity Center to run.
+(Usually choose the same region as your AWS Managed AD.)
+
+
+4. Change Identity Source to AWS Managed Microsoft AD
+   
+	1.	In IAM Identity Center, go to Settings → Identity Source.
+    
+	2.	Choose Change identity source.
+    
+	3.	Select AWS Managed Microsoft AD.
+    
+	4. Pick your directory from the dropdown.
+    
+	5.	Enter the AD connector service account credentials (bind account).
+    
+    6. Save changes.
+
+
+4. Assign Users and Groups from AD
+   
+	1.	In IAM Identity Center → Users and Groups, you should now see AD-synced objects.
+    
+	2.	Assign groups or users to AWS accounts or IAM roles:
+    
+	•	AWS Accounts: Assign permissions via Permission Sets.
+
+	•	Applications: Assign access to SAML-enabled apps.
+
+
+5. Test Access
+   
+	1.	Go to your AWS access portal URL (found in IAM Identity Center settings).
+    
+	2.  Log in with an Active Directory username and password.
+    
+	3.	Verify that:
+    
+	•	The portal shows assigned AWS accounts and apps.
+
+	•	MFA prompts appear if configured.
+
+
+6. (Optional) Enable MFA for AD Users
+   
+	•	Go to IAM Identity Center → Settings → Multi-Factor Authentication.
+
+	•	Enforce MFA for sign-in.
+
+	•	This works in addition to AD authentication.
+
+
+Common Pitfalls
+
+	•	Network issues: IAM Identity Center needs to reach AWS Managed AD over the right ports — check your security groups and VPC peering.
+ 
+	•	Time sync: AD and AWS must have synchronized clocks (NTP).
+ 
+	•	Permissions: The AD bind account must have read permissions on all required OUs.
+
+<img width="1284" height="773" alt="image" src="https://github.com/user-attachments/assets/f471dbbe-a7b3-4aa2-89b4-352a93344860" />
+
+
+
