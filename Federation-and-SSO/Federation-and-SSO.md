@@ -299,6 +299,9 @@ IAM Identity Center (formerly called AWS Single Sign-On) is AWS’s managed serv
 
 Instead of juggling separate IAM users and credentials in each AWS account, you can manage who has access to what in one place, and those people can sign in once to access everything they’re allowed to use.
 
+NB:
+
+To enable IAM Identity Center in an alternative Region, you must first delete the current IAM Identity Center configuration in the US East (Ohio) Region(default region)
 
 Key Features
 
